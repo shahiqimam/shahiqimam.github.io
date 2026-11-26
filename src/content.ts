@@ -147,7 +147,7 @@ export const projects: Project[] = [
   {
     id: 'rooted', name: 'Rooted', zone: 'build', status: 'private', color: '#3d6b35',
     tagline: 'Helps people move toward whole, organic food alongside their treatment.',
-    stack: ['Mobile app', 'Food–medication interaction data', 'Clinician reports'],
+    stack: ['React Native', 'TypeScript', 'iOS & Android'],
     highlights: [
       'Health profile of conditions and current medications',
       'Food safety check against a curated food–drug and food–condition interaction library (e.g. grapefruit with statins)',
