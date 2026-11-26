@@ -24,7 +24,7 @@ function openProject(id: string) {
       <p class="pd-kicker">${p.zone === 'security' ? 'Firewall Fortress' : p.zone === 'devops' ? 'Pipeline Works' : p.zone === 'client' ? 'ASVEX Studio' : 'Build District'}</p>
       <h2 id="pd-title">${esc(p.name)}${statusBadge(p.status)}</h2>
       <p class="pd-tag">${esc(p.tagline)}</p>
-      ${p.shot ? `<figure class="pd-shot"><img src="${p.shot}" alt="Screenshot of ${esc(p.name)}" loading="lazy" /></figure>` : ''}
+      ${p.shot ? `<figure class="pd-shot"><img src="${p.shot}" alt="${p.mockup ? 'Design mockup' : 'Screenshot'} of ${esc(p.name)}" loading="lazy" />${p.mockup ? '<figcaption>Design mockup of the app’s interface</figcaption>' : ''}</figure>` : ''}
       <h3>Highlights</h3>
       <ul class="ticks">${p.highlights.map((h) => `<li>${esc(h)}</li>`).join('')}</ul>
       <h3>Stack</h3>

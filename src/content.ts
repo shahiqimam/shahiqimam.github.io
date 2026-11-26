@@ -84,6 +84,8 @@ export type Project = {
   repo?: string;
   live?: string;
   shot?: string;
+  /** true when the image is a design mockup, not a capture of the running app */
+  mockup?: boolean;
   note?: string;
   color: string;
 };
@@ -107,11 +109,54 @@ export const projects: Project[] = [
     repo: gh('system-health-monitor'),
   },
   {
+    id: 'ghostspend', name: 'GhostSpend', zone: 'build', status: 'private', color: '#7b6cf0',
+    tagline: 'Find the subscriptions quietly draining your account, no bank login needed.',
+    stack: ['Next.js', 'TypeScript', 'NestJS', 'PostgreSQL', 'Recharts'],
+    highlights: [
+      'Upload a bank or card statement (CSV or PDF); no live bank link, no Plaid, no stored credentials',
+      'Merchant-name cleaner: "AMZN MKTP US*2K9…" becomes "Amazon"',
+      'Detects recurring billing cycles (weekly, monthly, annual) from transaction patterns',
+      'Price-creep alerts when the same subscription silently gets more expensive',
+      '"Annual Burn" dashboard: recurring vs one-time spend and the yearly cost of forgotten subscriptions',
+    ],
+    shot: '/shots/ghostspend.jpg', mockup: true,
+    note: 'Code and a live demo are available on request.',
+  },
+  {
     id: 'taskflow', name: 'TaskFlow API', zone: 'build', status: 'public', color: '#d9a62e',
     tagline: 'Project-management REST API built like production.',
     stack: ['NestJS', 'TypeScript', 'PostgreSQL', 'TypeORM', 'JWT', 'Docker'],
     highlights: ['Auth + role-based access control', 'Validation, migrations, filtering & pagination', 'Swagger / OpenAPI docs', 'Automated tests'],
     repo: gh('TaskFlow-API'),
+  },
+  {
+    id: 'tabzero', name: 'TabZero', zone: 'build', status: 'private', color: '#ff5a36',
+    tagline: 'Split group expenses and settle up in the fewest possible payments.',
+    stack: ['Next.js', 'TypeScript', 'NestJS', 'PostgreSQL'],
+    highlights: [
+      'Debt-simplification engine: nets every balance, then greedily matches largest debtor to largest creditor (at most n − 1 transfers)',
+      'Equal, exact, percentage and itemized receipt splits, with tax and tip shared proportionally',
+      'Money stored as integer cents; rounding remainders assigned by largest remainder so totals always match',
+      'Multi-user group ledgers modeled relationally',
+      'Shareable settlement cards and links, ready to paste into WhatsApp',
+      'Mobile-first UX',
+    ],
+    shot: '/shots/tabzero.jpg', mockup: true,
+    note: 'Code and a live demo are available on request.',
+  },
+  {
+    id: 'rooted', name: 'Rooted', zone: 'build', status: 'private', color: '#3d6b35',
+    tagline: 'Helps people move toward whole, organic food alongside their treatment.',
+    stack: ['Mobile app', 'Food–medication interaction data', 'Clinician reports'],
+    highlights: [
+      'Health profile of conditions and current medications',
+      'Food safety check against a curated food–drug and food–condition interaction library (e.g. grapefruit with statins)',
+      'Week-by-week whole-food transition plans with safer swaps',
+      'Progress tracking and a shareable report for the user’s doctor',
+      'Built around clinician oversight: medication decisions stay with the doctor',
+    ],
+    shot: '/shots/rooted.jpg', mockup: true,
+    note: 'Not medical advice: Rooted supports, and never replaces, a doctor’s guidance. Code and a demo are available on request.',
   },
   {
     id: 'keeptrack', name: 'KeepTrack', zone: 'build', status: 'private', color: '#c0587e',

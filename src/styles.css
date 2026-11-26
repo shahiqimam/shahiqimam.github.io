@@ -439,6 +439,7 @@ button { font: inherit; }
 .pd-tag { font-size: 17px; margin: 0 0 14px; }
 .pd-shot { margin: 16px 0 6px; border: 3px solid var(--ink); background: #fff; }
 .pd-shot img { display: block; width: 100%; height: auto; }
+.pd-shot figcaption { font: 700 11px/1 var(--mono); text-transform: uppercase; letter-spacing: .06em; padding: 8px 10px; border-top: 3px solid var(--ink); background: var(--paper-2); }
 .pd-note { font-size: 14px; background: #fff; border: 2px dashed var(--ink); padding: 10px 12px; margin: 16px 0 0; }
 .pd-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
 
