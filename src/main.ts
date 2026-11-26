@@ -14,7 +14,7 @@ function openProject(id: string) {
   const p = projects.find((q) => q.id === id);
   if (!p) return;
   const links = [
-    p.live ? `<a class="btn btn-primary" href="${p.live}" target="_blank" rel="noopener">Live site ↗</a>` : '',
+    p.live ? `<a class="btn btn-primary" href="${p.live}" target="_blank" rel="noopener">${p.zone === 'security' ? 'Product site' : 'Live site'} ↗</a>` : '',
     p.repo ? `<a class="btn" href="${p.repo}" target="_blank" rel="noopener">View code ↗</a>` : '',
   ].join('');
   dialog.style.setProperty('--c', p.color);
@@ -29,7 +29,7 @@ function openProject(id: string) {
       <ul class="ticks">${p.highlights.map((h) => `<li>${esc(h)}</li>`).join('')}</ul>
       <h3>Stack</h3>
       <ul class="chips">${p.stack.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>
-      ${p.status === 'private' ? '<p class="pd-note">The source code is private. Happy to walk through the architecture in an interview.</p>' : ''}
+      ${p.status === 'private' ? `<p class="pd-note">${p.note ? esc(p.note) + ' ' : 'The source code is private. '}Happy to walk through the architecture in an interview.</p>` : ''}
       ${links ? `<div class="pd-links">${links}</div>` : ''}
     </div>`;
   dialog.showModal();

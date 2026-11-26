@@ -107,13 +107,6 @@ export const projects: Project[] = [
     repo: gh('system-health-monitor'),
   },
   {
-    id: 'complai', name: 'ComplAI', zone: 'build', status: 'private', color: '#4c6ef5',
-    tagline: 'Marketing & product site for a GRC platform (audit, risk, TPRM, compliance).',
-    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-    highlights: ['Interactive executive-dashboard showcase', 'Multi-framework coverage: ISO 27001, NIST, regional frameworks', 'Consent-aware analytics', 'Responsive, performance-tuned build'],
-    live: 'https://complai-next.vercel.app', shot: '/shots/complai.jpg',
-  },
-  {
     id: 'taskflow', name: 'TaskFlow API', zone: 'build', status: 'public', color: '#d9a62e',
     tagline: 'Project-management REST API built like production.',
     stack: ['NestJS', 'TypeScript', 'PostgreSQL', 'TypeORM', 'JWT', 'Docker'],
@@ -149,6 +142,22 @@ export const projects: Project[] = [
     live: 'https://asvex-website.vercel.app', shot: '/shots/asvex.jpg',
   },
   // ── Firewall Fortress: security ──
+  {
+    id: 'complai', name: 'ComplAI', zone: 'security', status: 'private', color: '#4c6ef5',
+    tagline: 'Multi-tenant GRC platform I build at Multi Vision World.',
+    stack: ['NestJS', 'Next.js 14', 'PostgreSQL', 'Redis', 'Python FastAPI', 'Docker', 'Jenkins', 'Terraform'],
+    highlights: [
+      'Schema-per-tenant PostgreSQL isolation; JWT in memory + httpOnly refresh cookie',
+      '18 frameworks (ISO 27001, NIST CSF 2.0, SOC 2, PCI DSS, regional) with Statement of Applicability',
+      'Three-phase assessments, evidence, findings → risk register, ERM with bow-tie, KRIs and board reports',
+      'Vendor risk (TPRM) portal, policy lifecycle, awareness training & phishing simulations',
+      '20+ roles incl. time-boxed external-auditor access; hash-chained, tamper-evident audit log',
+      'AI assistance (gap detection, policy drafting) that always needs human approval',
+      'Integrations: Wazuh, Shuffle SOAR, Snipe-IT, Velociraptor; ClamAV scanning on upload',
+    ],
+    live: 'https://complai-next.vercel.app', shot: '/shots/complai.jpg',
+    note: 'Work project at Multi Vision World. Screenshot shows the product site; source is private.',
+  },
   {
     id: 'authforge', name: 'AuthForge', zone: 'security', status: 'public', color: '#2f8f83',
     tagline: 'Authentication & session service, security-first.',
