@@ -42,22 +42,49 @@ export const experience: Job[] = [
     ],
   },
   {
+    role: 'Freelance Web Developer',
+    org: 'Clients in the UK & KSA (under NDA)',
+    when: 'Jan 2026 · two 3-month contracts',
+    points: [
+      'Delivered development and technical research for two clients on fixed-term contracts.',
+      'Client names and project details are confidential under contract.',
+    ],
+  },
+  {
     role: 'Full-Stack Developer & Automation Engineer',
     org: 'ASVEX',
     orgUrl: 'https://www.asvex.ae',
-    when: 'Ongoing',
+    when: 'Sep 2025 – Present · Remote',
     points: [
       'Build full-stack apps, REST API / webhook integrations and workflow automation with Next.js, React, Node.js, PostgreSQL/Supabase, n8n, Make and Zapier.',
       'Develop AI-assisted workflows with OpenAI, Claude, LangChain and Vapi, from requirements through testing and deployment.',
     ],
   },
   {
+    role: 'UI/UX Designer',
+    org: 'Evox',
+    when: 'Jun 2024 – Sep 2024',
+    points: [
+      'Designed user interfaces and user experiences in Adobe XD, Figma and Sketch.',
+      'Worked on branding, and used Azure as part of the team’s tooling.',
+    ],
+  },
+  {
+    role: 'Customer Service Representative → Team Lead',
+    org: 'Touchstone BPO',
+    when: 'Summers 2022 & 2023 · 3 months each',
+    points: [
+      'Started as a Customer Service Representative and later moved up to lead a team.',
+    ],
+  },
+  {
     role: 'Founder',
     org: 'ASVEX',
     orgUrl: 'https://www.asvex.ae',
-    when: 'Founded',
+    when: 'Apr 2020 – Present · Islamabad',
     points: [
-      'Founded an independent technology business spanning custom computer systems, technical services, software development and automation.',
+      'Founded ASVEX as an independent technology business, starting with custom computer systems, hardware sourcing and technical services.',
+      'Grew it into software development and automation for business clients.',
     ],
   },
 ];
@@ -70,6 +97,7 @@ export const skills: SkillGroup[] = [
   { name: 'DevOps', icon: '⚙', items: ['Docker', 'Compose', 'Jenkins', 'CI/CD', 'Nginx', 'Git', 'GitHub', 'Vercel', 'Linux'] },
   { name: 'Security', icon: '⛨', items: ['JWT', 'RBAC', 'MFA / TOTP', 'Argon2id', 'GRC', 'ISO 27001', 'SIEM / SOAR'] },
   { name: 'AI & Automation', icon: '✦', items: ['OpenAI', 'Claude', 'LangChain', 'n8n', 'Make', 'Zapier'] },
+  { name: 'Design', icon: '✎', items: ['Figma', 'Adobe XD', 'Sketch', 'UI/UX', 'Branding'] },
 ];
 
 export type ProjectStatus = 'public' | 'private' | 'wip';
