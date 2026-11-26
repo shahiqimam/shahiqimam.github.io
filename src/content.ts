@@ -96,6 +96,7 @@ export const projects: Project[] = [
   // ── Build District: full-stack products ──
   {
     id: 'stockpilot', name: 'StockPilot', zone: 'build', status: 'public', color: '#e8774a',
+    shot: '/shots/stockpilot.jpg', mockup: true,
     tagline: 'Inventory & asset management with a real audit trail.',
     stack: ['Next.js', 'NestJS', 'PostgreSQL', 'TypeORM', 'Docker'],
     highlights: ['Transactional stock movements: no phantom stock', 'Serialized assets and assignments', 'RBAC, CSV import/export workflows', 'Full audit history'],
@@ -103,6 +104,7 @@ export const projects: Project[] = [
   },
   {
     id: 'pulsewatch', name: 'PulseWatch', zone: 'build', status: 'public', color: '#3fae8c',
+    shot: '/shots/pulsewatch.jpg', mockup: true,
     tagline: 'Service health & uptime monitor.',
     stack: ['NestJS', 'Next.js', 'PostgreSQL'],
     highlights: ['Scheduled HTTP checks', 'SSRF-hardened check engine', 'Incident lifecycle', 'Uptime & latency metrics'],
@@ -124,6 +126,7 @@ export const projects: Project[] = [
   },
   {
     id: 'taskflow', name: 'TaskFlow API', zone: 'build', status: 'public', color: '#d9a62e',
+    shot: '/shots/taskflow.jpg', mockup: true,
     tagline: 'Project-management REST API built like production.',
     stack: ['NestJS', 'TypeScript', 'PostgreSQL', 'TypeORM', 'JWT', 'Docker'],
     highlights: ['Auth + role-based access control', 'Validation, migrations, filtering & pagination', 'Swagger / OpenAPI docs', 'Automated tests'],
@@ -160,12 +163,14 @@ export const projects: Project[] = [
   },
   {
     id: 'keeptrack', name: 'KeepTrack', zone: 'build', status: 'private', color: '#c0587e',
+    shot: '/shots/keeptrack.jpg', mockup: true,
     tagline: 'Never miss an important date: passports, renewals, documents.',
     stack: ['Next.js', 'NestJS', 'PostgreSQL', 'Prisma', 'BullMQ', 'Turborepo'],
     highlights: ['Monorepo: web app, REST API and background worker', 'Timezone-aware reminders with DST coverage', 'Idempotent notifications, retries & failure classification', 'Households, documents, Smart Add and billing flows'],
   },
   {
     id: 'metropulse', name: 'MetroPulse', zone: 'build', status: 'public', color: '#5b8bd9',
+    shot: '/shots/metropulse.jpg', mockup: true,
     tagline: 'Real-time transit operations platform (synthetic data).',
     stack: ['Java 21', 'Spring Boot', 'Kafka', 'PostGIS', 'Redis', 'Angular'],
     highlights: ['Transactional outbox → Kafka', 'Idempotent consumers with dead-letter topic', 'PostGIS route projection, headway & bunching detection', 'Incident workflow and historical playback'],
@@ -173,6 +178,7 @@ export const projects: Project[] = [
   },
   {
     id: 'gridlens', name: 'GridLens', zone: 'build', status: 'wip', color: '#8a6bd1',
+    shot: '/shots/gridlens.jpg', mockup: true,
     tagline: 'Utility-network GIS & outage intelligence (synthetic data).',
     stack: ['Next.js', 'MapLibre', 'NestJS', 'PostGIS', 'Redis', 'Docker'],
     highlights: ['Network topology modeling in PostGIS', 'Telemetry ingestion from a simulator', 'Downstream outage impact tracing', 'In active development'],
@@ -200,11 +206,12 @@ export const projects: Project[] = [
       'AI assistance (gap detection, policy drafting) that always needs human approval',
       'Integrations: Wazuh, Shuffle SOAR, Snipe-IT, Velociraptor; ClamAV scanning on upload',
     ],
-    live: 'https://complai-next.vercel.app', shot: '/shots/complai.jpg',
-    note: 'Work project at Multi Vision World. Screenshot shows the product site; source is private.',
+    live: 'https://complai-next.vercel.app', shot: '/shots/complai-platform.jpg', mockup: true,
+    note: 'Work project at Multi Vision World; the source is private.',
   },
   {
     id: 'authforge', name: 'AuthForge', zone: 'security', status: 'public', color: '#2f8f83',
+    shot: '/shots/authforge.jpg', mockup: true,
     tagline: 'Authentication & session service, security-first.',
     stack: ['NestJS', 'PostgreSQL', 'Redis', 'JWT', 'TOTP'],
     highlights: ['Argon2id password hashing', 'Short-lived JWTs + rotating opaque refresh tokens', 'Refresh-token replay detection', 'TOTP MFA with one-time recovery codes', 'Session revocation, RBAC, durable audit events'],
@@ -212,6 +219,7 @@ export const projects: Project[] = [
   },
   {
     id: 'sentinelview', name: 'SentinelView', zone: 'security', status: 'public', color: '#c4492f',
+    shot: '/shots/sentinelview.jpg', mockup: true,
     tagline: 'Security-event dashboard: normalize SIEM / EDR / IAM.',
     stack: ['Next.js', 'NestJS', 'PostgreSQL', 'Docker'],
     highlights: ['Adapter pattern per source with validation', 'Normalized event model, JSONB raw payloads', 'Idempotent ingestion & duplicate merging', 'Analyst workflow: status, assignment, notes, history'],
@@ -219,6 +227,7 @@ export const projects: Project[] = [
   },
   {
     id: 'grc', name: 'GRC Risk Register', zone: 'security', status: 'public', color: '#b5832c',
+    shot: '/shots/grc.jpg', mockup: true,
     tagline: 'Assets, controls, treatments, inherent & residual risk.',
     stack: ['Next.js', 'NestJS', 'PostgreSQL', 'TypeORM', 'Recharts'],
     highlights: ['5×5 inherent-risk heatmap', 'Admin / Risk Manager / Viewer roles', 'Risk history, filtering & CSV export', 'Clear GRC domain modeling'],
@@ -226,6 +235,7 @@ export const projects: Project[] = [
   },
   {
     id: 'saudiready', name: 'SaudiReady', zone: 'security', status: 'public', color: '#3c7d4f',
+    shot: '/shots/saudiready.jpg', mockup: true,
     tagline: 'KSA cybersecurity & privacy readiness workspace.',
     stack: ['Next.js', 'NestJS', 'PostgreSQL', 'TypeScript'],
     highlights: ['Profile → applicability → assessment → evidence → gaps → actions', 'Readiness always reported with coverage: never a fake 0%', 'Type system enforces what the app refuses to claim', 'Educational, with explicit non-certification disclaimers'],
@@ -234,6 +244,7 @@ export const projects: Project[] = [
   // ── Pipeline Works: DevOps ──
   {
     id: 'releaseboard', name: 'ReleaseBoard', zone: 'devops', status: 'public', color: '#2b6cb0',
+    shot: '/shots/releaseboard.jpg', mockup: true,
     tagline: 'Containerized deployment lab.',
     stack: ['Docker', 'Jenkins', 'Nginx', 'PostgreSQL'],
     highlights: ['Multi-stage Docker images', 'Nginx reverse proxy + health checks', 'Jenkins pipeline with smoke tests', 'Rollback workflow'],
@@ -241,6 +252,7 @@ export const projects: Project[] = [
   },
   {
     id: 'cicd', name: 'CI/CD Pipeline Demo', zone: 'devops', status: 'public', color: '#d4672a',
+    shot: '/shots/cicd.jpg', mockup: true,
     tagline: 'Enterprise-style Jenkins pipeline, end to end.',
     stack: ['Jenkins', 'Docker', 'NestJS', 'Next.js', 'Vitest'],
     highlights: ['Lint, type-check, coverage-gated unit tests', 'Dependency, secret & image scanning', 'Integration tests on throwaway Postgres + Redis', 'Staging → manual approval → prod with auto-rollback'],
